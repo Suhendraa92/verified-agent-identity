@@ -4,13 +4,13 @@ on:
   workflow_dispatch:
     inputs:
       agent_name:
-        description: 'suhendra'
+        description: 'elzain'
         required: true
-        default: 'suhendra'
+        default: 'elzain'
       agent_description:
-        description: 'suhendra'
+        description: 'elzain'
         required: true
-        default: 'suhendra AI Agent'
+        default: 'elzain AI Agent'
 
 jobs:
   verify:
@@ -30,12 +30,9 @@ jobs:
 
       - name: Install script dependencies
         run: |
-          cd scripts
-          npm install
-
-      - name: Step 2 - Create new Ethereum Identity
+          cd script                       npm install  - name: Step 2 - Create new Ethereum Identity
         run: node scripts/createNewEthereumIdentity.js
 
       - name: Step 3 - Link Human to Agent
         run: |
-          node scripts/manualLinkHumanToAgent.js --challenge '{"name": "suhendra", "description": "suhendra AI Agent"}'
+          node scripts/manualLinkHumanToAgent.js --challenge '{"name": "elzain", "description": "elzain AI Agent"}'
